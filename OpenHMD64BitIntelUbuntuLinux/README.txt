@@ -1,6 +1,6 @@
 This is a prebuilt version of libopenhmd.so from the current
 git master branch of https://github.com/OpenHMD/OpenHMD
-at commit 6b3d254886ed64655ea43fb19c743eafd865d3c3 (19-July-2017).
+at commit b443deb8d7fab39e3436dfc2e0438a8dfaee90d9 (13-August-2017).
 
 This library is meant for use on 64-Bit Intel compatible processor,
 tested with 64-Bit Ubuntu Linux 14.04.5 LTS and 16.04.2 LTS, but might
