@@ -25,3 +25,10 @@ under the Boost-1.0 software license, as described in the LICENSE file.
 This file will be deleted as soon as a sufficiently up-to-date version
 of OpenHMD is available as a regular Debian package inside an up to date
 version of Ubuntu Linux.
+
+This folder also contains openhmdkeepalivedaemon. This executable needs to
+be installed on your Linux system and started at system boot if you use a
+HMD other than the Rift DK1 or Rift DK2. Otherwise the HMD will not get
+detected by PTB and the X-Server properly and the VR rendering will not
+display on the HMD, but on your regular displays, which is not what you
+want. openhmdkeepalivedaemon is currently distributed under MIT license.
