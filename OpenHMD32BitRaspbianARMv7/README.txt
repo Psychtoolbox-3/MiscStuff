@@ -1,6 +1,6 @@
 This is a prebuilt version of libopenhmd.so from the current
 git master branch of https://github.com/OpenHMD/OpenHMD
-at commit 6b3d254886ed64655ea43fb19c743eafd865d3c3 (19-July-2017).
+at commit b443deb8d7fab39e3436dfc2e0438a8dfaee90d9 (13-August-2017).
 
 This library is meant for use on the RaspberryPi with
 Raspbian, so it is compiled for 32-Bit ARMv7 architecture.
@@ -22,3 +22,10 @@ under the Boost-1.0 software license, as described in the LICENSE file.
 This file will be deleted as soon as a sufficiently up-to-date version
 of OpenHMD is available as a regular Debian package inside an up to date
 version of Raspbian.
+
+This folder also contains openhmdkeepalivedaemon. This executable needs to
+be installed on your Linux system and started at system boot if you use a
+HMD other than the Rift DK1 or Rift DK2. Otherwise the HMD will not get
+detected by PTB and the X-Server properly and the VR rendering will not
+display on the HMD, but on your regular displays, which is not what you
+want. openhmdkeepalivedaemon is currently distributed under MIT license.
