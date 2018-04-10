@@ -32,3 +32,17 @@ HMD other than the Rift DK1 or Rift DK2. Otherwise the HMD will not get
 detected by PTB and the X-Server properly and the VR rendering will not
 display on the HMD, but on your regular displays, which is not what you
 want. openhmdkeepalivedaemon is currently distributed under MIT license.
+
+On system with systemd as service manager, you can setup openhmdkeepalivedaemon
+to start automatically during system bootup by use of a systemd service definition
+file. The following example was successfully tested on Ubuntu 16.04-LTS:
+
+1. Copy openhmdkeepalivedaemon to /usr/local/bin/openhmdkeepalivedaemon
+2. Copy openhmdkeepalive.service to /lib/systemd/system/openhmdkeepalive.service
+3. systemctl enable openhmdkeepalive.service
+4. This should work after the next system reboot, or immediately if you manually
+   start the service via "systemctl start openhmdkeepalive"
+
+You could always disable openhmdkeepalivedaemon again via:
+
+systemctl disable openhmdkeepalive.service

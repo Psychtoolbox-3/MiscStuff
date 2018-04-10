@@ -1,0 +1,20 @@
+[Unit]
+Description=Support Openhmd
+Before=graphical.target
+ConditionPathExists=/usr/local/bin
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/openhmdkeepalivedaemon
+ExecReload=/usr/local/bin/openhmdkeepalivedaemon
+Environment=BOOTUP=serial
+Environment=CONSOLETYPE=serial
+StandardOutput=syslog
+StandardError=syslog
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical.target
+
